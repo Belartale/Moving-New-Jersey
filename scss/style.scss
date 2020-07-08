@@ -5,23 +5,54 @@ body {
         .header-top {
             padding-top: 27px;
             padding-bottom: 20px;
-            display: flex;
-            align-items: center;
             background-color: $color-blue;
-            nav {
-                ul {
-                    li {
-                        display: inline-block;
-                    }
-                }
-            }
-            img:nth-of-type(1) {
+            .logo {
                 height: 48px;
                 width: 80px;
             }
-            img:nth-of-type(2) {
+            .logo-text {
+                margin-left: 15px;
+                margin-right: 20px;
+                text-transform: uppercase;
+                @include adaptiv-font(50, 1);
+                font-weight: 600;
+            }
+            .header-vertical-line {
+                width: 1px;
+                height: 70px;
+                background-color: $color-light-blue;
+            }
+            .header-vertical-line-after-text {
+                margin-left: 20px;
+                margin-right: 60px;
+                font-size: 13px;
+                font-weight: bold;
+                text-transform: uppercase;
+                color: #b5c2d6;
+            }
+            nav {
+                ul {
+                    padding: 0px;
+                    text-transform: uppercase;
+                    a {
+                        margin: 0 10px;
+                        li {
+                            display: inline-block;
+                            font-family: $font-one;
+                            font-size: 13.55px;
+                            color: $color-white;
+                        }
+                    }
+                }
+            }
+            .header-img-phone {
+                margin-left: 95px;
                 height: 21px;
                 width: 24px;
+            }
+            .header-img-phone-number {
+                margin: 0 10px;
+                font-size: 21.94px;
             }
         }
     }

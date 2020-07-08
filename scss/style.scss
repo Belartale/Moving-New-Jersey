@@ -1,0 +1,28 @@
+@import "main-style.scss";
+
+body {
+    header {
+        .header-top {
+            padding-top: 27px;
+            padding-bottom: 20px;
+            display: flex;
+            align-items: center;
+            background-color: $color-blue;
+            nav {
+                ul {
+                    li {
+                        display: inline-block;
+                    }
+                }
+            }
+            img:nth-of-type(1) {
+                height: 48px;
+                width: 80px;
+            }
+            img:nth-of-type(2) {
+                height: 21px;
+                width: 24px;
+            }
+        }
+    }
+}

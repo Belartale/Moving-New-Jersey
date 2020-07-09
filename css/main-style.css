@@ -1,0 +1,50 @@
+/* $TimesNewRoman %wrapperPaddingSides {
+    padding-left: 100px;
+    padding-right: 100px;
+} */
+.wrapper {
+  max-width: 1180px;
+  width: 100%;
+  margin: 0px auto;
+}
+
+.flex-vertical-center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.color-write {
+  color: white;
+}
+
+.color-blue {
+  color: #1c3051;
+}
+
+.font-one {
+  font-family: "Montserrat";
+}
+
+.font-two {
+  font-family: "Proxima Nova Cn Lt";
+}
+
+.text-big-white {
+  color: white;
+}
+
+.text-big-blue {
+  color: #1c3051;
+}
+
+.text-middle-white {
+  color: white;
+}
+
+.text-middle-blue {
+  color: #1c3051;
+}

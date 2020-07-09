@@ -13,9 +13,13 @@ body {
             .logo-text {
                 margin-left: 15px;
                 margin-right: 20px;
-                text-transform: uppercase;
-                @include adaptiv-font(50, 1);
-                font-weight: 600;
+                a {
+                    font-family: $font-one;
+                    text-transform: uppercase;
+                    @include adaptiv-font(25.05, 20.05);
+                    font-weight: 600;
+                    color: $color-white;
+                }
             }
             .header-vertical-line {
                 width: 1px;
@@ -24,35 +28,38 @@ body {
             }
             .header-vertical-line-after-text {
                 margin-left: 20px;
-                margin-right: 60px;
-                font-size: 13px;
+                margin-right: 80px;
+                @include adaptiv-font(13, 9);
                 font-weight: bold;
                 text-transform: uppercase;
                 color: #b5c2d6;
             }
             nav {
                 ul {
+                    margin-right: 65px;
                     padding: 0px;
-                    text-transform: uppercase;
-                    a {
-                        margin: 0 10px;
-                        li {
-                            display: inline-block;
+                    display: flex;
+                    li {
+                        margin-right: 10px;
+                        list-style-type: none;
+                        a {
                             font-family: $font-one;
-                            font-size: 13.55px;
+                            @include adaptiv-font(13.55, 7.55);
+                            text-transform: uppercase;
                             color: $color-white;
                         }
                     }
                 }
             }
             .header-img-phone {
-                margin-left: 95px;
                 height: 21px;
                 width: 24px;
             }
             .header-img-phone-number {
                 margin: 0 10px;
-                font-size: 21.94px;
+                font-family: $font-one;
+                @include adaptiv-font(21.94, 16.94);
+                font-weight: 900;
             }
         }
     }

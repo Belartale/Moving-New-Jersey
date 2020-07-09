@@ -1,65 +1,161 @@
-@import "main-style.scss";
+//! fonrs-variable
+$font-one: "Montserrat";
+$font-two: "Proxima Nova Cn Lt";
+//! colorvariable
+$color-blue: #1c3051;
+$color-light-blue: #3b5072;
+$colro-yellow: #ff7101;
+$color-white: white;
+
+$maxWidth: 1920;
+$maxWrapper: 1180px;
+/* $TimesNewRoman %wrapperPaddingSides {
+    padding-left: 100px;
+    padding-right: 100px;
+} */
+
+//@include adaptiv-font(, );
+
+@mixin adaptiv-font($pcSize, $modSize) {
+    $addSize: $pcSize - $modSize;
+    $addModSize: $addSize + $addSize * 0.7;
+    @media (max-width: 767px) {
+        font-size: calc(
+            #{$modSize + px} + #{$addModSize} * ((100vw - 320px) / #{$maxWidth})
+        );
+    }
+    @media (min-width: 767px) {
+        font-size: calc(
+            #{$modSize + px} + #{$addSize} * (100vw / #{$maxWidth})
+        );
+    }
+}
+
+@mixin indent($what, $px) {
+    $result: $px / $maxWidth * 100;
+    $what: #{$result + px};
+}
+
+//! all style
+.wrapper {
+    //todo padding: 0 100px;
+    max-width: $maxWrapper;
+    width: 100%;
+    margin: 0px auto;
+}
+.flex-vertical-center {
+    display: flex;
+    align-items: center;
+}
+.color-white {
+    color: $color-white;
+}
+.color-blue {
+    color: $color-blue;
+}
+//! fonts-classes
+.font-one {
+    font-family: $font-one;
+}
+.font-two {
+    font-family: $font-two;
+}
+.text-title-white {
+    font-family: $font-two;
+    @include adaptiv-font(32.67, 22.67);
+    color: $color-white;
+}
+.text-title-blue {
+    @extend .text-title-white;
+    color: $color-blue;
+}
+.text-middle-white {
+    color: $color-white;
+}
+.text-middle-blue {
+    @extend .text-middle-white;
+    color: $color-blue;
+}
 
 body {
     header {
-        .header-top {
-            padding-top: 27px;
-            padding-bottom: 20px;
-            background-color: $color-blue;
-            .logo {
-                height: 48px;
-                width: 80px;
-            }
-            .logo-text {
-                margin-left: 15px;
-                margin-right: 20px;
-                a {
-                    font-family: $font-one;
-                    text-transform: uppercase;
-                    @include adaptiv-font(25.05, 20.05);
-                    font-weight: 600;
-                    color: $color-white;
+        .header-img-background-room {
+            background-image: url(../img/header-img-background-room.png);
+            .header-top {
+                padding-top: 27px;
+                padding-bottom: 20px;
+                background-color: $color-blue;
+                .logo {
+                    height: 48px;
+                    width: 80px;
                 }
-            }
-            .header-vertical-line {
-                width: 1px;
-                height: 70px;
-                background-color: $color-light-blue;
-            }
-            .header-vertical-line-after-text {
-                margin-left: 20px;
-                margin-right: 80px;
-                @include adaptiv-font(13, 9);
-                font-weight: bold;
-                text-transform: uppercase;
-                color: #b5c2d6;
-            }
-            nav {
-                ul {
-                    margin-right: 65px;
-                    padding: 0px;
-                    display: flex;
-                    li {
-                        margin-right: 10px;
-                        list-style-type: none;
-                        a {
-                            font-family: $font-one;
-                            @include adaptiv-font(13.55, 7.55);
-                            text-transform: uppercase;
-                            color: $color-white;
+                .logo-text {
+                    margin-left: 15px;
+                    margin-right: 20px;
+                    a {
+                        font-family: $font-one;
+                        text-transform: uppercase;
+                        @include adaptiv-font(25.05, 20.05);
+                        font-weight: 600;
+                        color: $color-white;
+                    }
+                }
+                .header-vertical-line {
+                    width: 1px;
+                    height: 70px;
+                    background-color: $color-light-blue;
+                }
+                .header-vertical-line-after-text {
+                    margin-left: 20px;
+                    margin-right: 80px;
+                    @include adaptiv-font(13, 9);
+                    font-weight: bold;
+                    text-transform: uppercase;
+                    color: #b5c2d6;
+                }
+                nav {
+                    ul {
+                        margin-right: 65px;
+                        padding: 0px;
+                        display: flex;
+                        li {
+                            margin-right: 10px;
+                            list-style-type: none;
+                            a {
+                                font-family: $font-one;
+                                @include adaptiv-font(13.55, 7.55);
+                                text-transform: uppercase;
+                                color: $color-white;
+                            }
                         }
                     }
                 }
+                .header-img-phone {
+                    height: 21px;
+                    width: 24px;
+                }
+                .header-img-phone-number {
+                    margin: 0 10px;
+                    font-family: $font-one;
+                    @include adaptiv-font(21.94, 16.94);
+                    font-weight: 900;
+                }
             }
-            .header-img-phone {
-                height: 21px;
-                width: 24px;
+            .header-yellow-line {
+                width: 100%;
+                height: 7px;
+                background-color: $colro-yellow;
             }
-            .header-img-phone-number {
-                margin: 0 10px;
-                font-family: $font-one;
-                @include adaptiv-font(21.94, 16.94);
-                font-weight: 900;
+            .header-main-information {
+                .header-heading {
+                    padding-top: 90px;
+                    padding-bottom: 40px;
+                    font-family: $font-one;
+                    @include adaptiv-font(93.78, 50.78);
+                    text-transform: uppercase;
+                    font-weight: 900;
+                    color: $color-white;
+                }
             }
         }
     }

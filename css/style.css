@@ -11,7 +11,7 @@
   display: flex;
   align-items: center; }
 
-.color-write {
+.color-white {
   color: white; }
 
 .color-blue {
@@ -23,82 +23,108 @@
 .font-two {
   font-family: "Proxima Nova Cn Lt"; }
 
-.text-big-white {
+.text-title-white, .text-title-blue {
+  font-family: "Proxima Nova Cn Lt";
   color: white; }
+  @media (max-width: 767px) {
+    .text-title-white, .text-title-blue {
+      font-size: calc( 22.67px + 17 * ((100vw - 320px) / 1920)); } }
+  @media (min-width: 767px) {
+    .text-title-white, .text-title-blue {
+      font-size: calc( 22.67px + 10 * (100vw / 1920)); } }
 
-.text-big-blue {
+.text-title-blue {
   color: #1c3051; }
 
-.text-middle-white {
+.text-middle-white, .text-middle-blue {
   color: white; }
 
 .text-middle-blue {
   color: #1c3051; }
 
-body header .header-top {
-  padding-top: 27px;
-  padding-bottom: 20px;
-  background-color: #1c3051; }
-  body header .header-top .logo {
-    height: 48px;
-    width: 80px; }
-  body header .header-top .logo-text {
-    margin-left: 15px;
-    margin-right: 20px; }
-    body header .header-top .logo-text a {
-      font-family: "Montserrat";
-      text-transform: uppercase;
-      font-weight: 600;
-      color: white; }
-      @media (max-width: 767px) {
-        body header .header-top .logo-text a {
-          font-size: calc( 20.05px + 8.5 * ((100vw - 320px) / $maxWidth)); } }
-      @media (min-width: 767px) {
-        body header .header-top .logo-text a {
-          font-size: calc(20.05px + 5 * (100vw / $maxWidth)); } }
-  body header .header-top .header-vertical-line {
-    width: 1px;
-    height: 70px;
-    background-color: #3b5072; }
-  body header .header-top .header-vertical-line-after-text {
-    margin-left: 20px;
-    margin-right: 80px;
-    font-weight: bold;
-    text-transform: uppercase;
-    color: #b5c2d6; }
-    @media (max-width: 767px) {
-      body header .header-top .header-vertical-line-after-text {
-        font-size: calc( 9px + 6.8 * ((100vw - 320px) / $maxWidth)); } }
-    @media (min-width: 767px) {
-      body header .header-top .header-vertical-line-after-text {
-        font-size: calc(9px + 4 * (100vw / $maxWidth)); } }
-  body header .header-top nav ul {
-    margin-right: 65px;
-    padding: 0px;
-    display: flex; }
-    body header .header-top nav ul li {
-      margin-right: 10px;
-      list-style-type: none; }
-      body header .header-top nav ul li a {
+body header .header-img-background-room {
+  background-image: url(../img/header-img-background-room.png); }
+  body header .header-img-background-room .header-top {
+    padding-top: 27px;
+    padding-bottom: 20px;
+    background-color: #1c3051; }
+    body header .header-img-background-room .header-top .logo {
+      height: 48px;
+      width: 80px; }
+    body header .header-img-background-room .header-top .logo-text {
+      margin-left: 15px;
+      margin-right: 20px; }
+      body header .header-img-background-room .header-top .logo-text a {
         font-family: "Montserrat";
         text-transform: uppercase;
+        font-weight: 600;
         color: white; }
         @media (max-width: 767px) {
-          body header .header-top nav ul li a {
-            font-size: calc( 7.55px + 10.2 * ((100vw - 320px) / $maxWidth)); } }
+          body header .header-img-background-room .header-top .logo-text a {
+            font-size: calc( 20.05px + 8.5 * ((100vw - 320px) / 1920)); } }
         @media (min-width: 767px) {
-          body header .header-top nav ul li a {
-            font-size: calc(7.55px + 6 * (100vw / $maxWidth)); } }
-  body header .header-top .header-img-phone {
-    height: 21px;
-    width: 24px; }
-  body header .header-top .header-img-phone-number {
-    margin: 0 10px;
+          body header .header-img-background-room .header-top .logo-text a {
+            font-size: calc( 20.05px + 5 * (100vw / 1920)); } }
+    body header .header-img-background-room .header-top .header-vertical-line {
+      width: 1px;
+      height: 70px;
+      background-color: #3b5072; }
+    body header .header-img-background-room .header-top .header-vertical-line-after-text {
+      margin-left: 20px;
+      margin-right: 80px;
+      font-weight: bold;
+      text-transform: uppercase;
+      color: #b5c2d6; }
+      @media (max-width: 767px) {
+        body header .header-img-background-room .header-top .header-vertical-line-after-text {
+          font-size: calc( 9px + 6.8 * ((100vw - 320px) / 1920)); } }
+      @media (min-width: 767px) {
+        body header .header-img-background-room .header-top .header-vertical-line-after-text {
+          font-size: calc( 9px + 4 * (100vw / 1920)); } }
+    body header .header-img-background-room .header-top nav ul {
+      margin-right: 65px;
+      padding: 0px;
+      display: flex; }
+      body header .header-img-background-room .header-top nav ul li {
+        margin-right: 10px;
+        list-style-type: none; }
+        body header .header-img-background-room .header-top nav ul li a {
+          font-family: "Montserrat";
+          text-transform: uppercase;
+          color: white; }
+          @media (max-width: 767px) {
+            body header .header-img-background-room .header-top nav ul li a {
+              font-size: calc( 7.55px + 10.2 * ((100vw - 320px) / 1920)); } }
+          @media (min-width: 767px) {
+            body header .header-img-background-room .header-top nav ul li a {
+              font-size: calc( 7.55px + 6 * (100vw / 1920)); } }
+    body header .header-img-background-room .header-top .header-img-phone {
+      height: 21px;
+      width: 24px; }
+    body header .header-img-background-room .header-top .header-img-phone-number {
+      margin: 0 10px;
+      font-family: "Montserrat";
+      font-weight: 900; }
+      @media (max-width: 767px) {
+        body header .header-img-background-room .header-top .header-img-phone-number {
+          font-size: calc( 16.94px + 8.5 * ((100vw - 320px) / 1920)); } }
+      @media (min-width: 767px) {
+        body header .header-img-background-room .header-top .header-img-phone-number {
+          font-size: calc( 16.94px + 5 * (100vw / 1920)); } }
+  body header .header-img-background-room .header-yellow-line {
+    width: 100%;
+    height: 7px;
+    background-color: #ff7101; }
+  body header .header-img-background-room .header-main-information .header-heading {
+    padding-top: 90px;
+    padding-bottom: 40px;
     font-family: "Montserrat";
-    font-weight: 900; }
+    text-transform: uppercase;
+    font-weight: 900;
+    color: white; }
     @media (max-width: 767px) {
-      body header .header-top .header-img-phone-number {
-        font-size: calc( 16.94px + 8.5 * ((100vw - 320px) / $maxWidth)); } }
+      body header .header-img-background-room .header-main-information .header-heading {
+        font-size: calc( 50.78px + 73.1 * ((100vw - 320px) / 1920)); } }
     @media (min-width: 767px) {
-      body header .header-top .header-img-phone-number {
-        font-size: calc(16.94px + 5 * (100vw / $maxWidth)); } }
+      body header .header-img-background-room .header-main-information .header-heading {
+        font-size: calc( 50.78px + 43 * (100vw / 1920)); } }

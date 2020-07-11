@@ -5,7 +5,9 @@ $font-proxima-nova-excn-rg: "Proxima Nova ExCn Rg";
 $font-proxima-nova-lt: "Proxima Nova Lt";
 $font-proxima-nova-bl: "Proxima Nova Bl";
 $font-proxima-nova-black: "Proxima Nova Cn Bl";
-//! colorvariable
+$font-helvetica-neue: "HelveticaNeueCyr";
+
+//! color-variable
 $color-blue: #1c3051;
 $color-light-blue: #3b5072;
 $colro-yellow: #ff7101;
@@ -70,6 +72,9 @@ $maxWrapper: 1180px;
     text-transform: uppercase;
     font-weight: 900;
     color: $color-white;
+}
+.display-block {
+    display: block;
 }
 .color-white {
     color: $color-white;
@@ -141,6 +146,7 @@ body {
                         text-transform: uppercase;
                         @include adaptiv-font(25.05, 20.05);
                         font-weight: 600;
+                        line-height: -110px;
                         color: $color-white;
                     }
                 }
@@ -175,15 +181,25 @@ body {
                         }
                     }
                 }
-                .header-img-phone {
-                    height: 21px;
-                    width: 24px;
-                }
-                .header-img-phone-number {
-                    margin: 0 10px;
-                    font-family: $font-montserrat;
-                    @include adaptiv-font(21.94, 16.94);
-                    font-weight: 900;
+                #show-phone {
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+                    cursor: pointer;
+                    .header-img-phone {
+                        height: 21px;
+                        width: 24px;
+                    }
+                    .header-img-phone-number {
+                        margin: 0 10px;
+                        font-family: $font-montserrat;
+                        @include adaptiv-font(21.94, 16.94);
+                        font-weight: 900;
+                    }
+                    .header-img-arrow {
+                        height: 6px;
+                        width: 11px;
+                    }
                 }
             }
             .header-yellow-line {
@@ -263,7 +279,7 @@ body {
                     .feedback-form-input {
                         margin-top: 50px;
                         padding-left: 20px;
-                        height: 60px;
+                        height: 65px;
                         width: 300px;
                         background: transparent;
                         border: 1px solid $color-white;
@@ -280,17 +296,18 @@ body {
                         position: absolute;
                         top: 50%;
                         left: 50%;
-                        transform: translate(130%, -8%);
+                        transform: translate(130%, -13%); //130
                         border: none;
                         border-radius: 35px;
-                        width: 200px !important;
-                        height: 60px !important;
+                        width: 200px;
+                        height: 65px;
                         font-family: $font-montserrat;
                         @include adaptiv-font(14, 10);
                         font-weight: 900;
                         text-transform: uppercase;
                         background-color: $color-white;
                         color: #474747;
+                        cursor: pointer;
                     }
                 }
             }
@@ -420,6 +437,7 @@ body {
                 #get-free-quote-form-submit {
                     background-color: $colro-yellow;
                     font-weight: 900;
+                    cursor: pointer;
                 }
             }
         }
@@ -460,6 +478,68 @@ body {
                     text-transform: uppercase;
                     color: $color-blue;
                 }
+            }
+        }
+    }
+    .get-discount {
+        padding-top: 100px;
+        padding-bottom: 85px;
+        background-image: url(../img/get-discount-happy-peaple.png);
+        background-size: cover;
+        background-position: center;
+        .get-discount-grid-time {
+            margin-top: 90px;
+            display: grid;
+            justify-content: center;
+            grid-template-columns: repeat(4, auto);
+            grid-template-rows: repeat(3, auto);
+            grid-column-gap: 45px;
+            grid-row-gap: 30px;
+            .get-discount-grid-time-text {
+                font-family: $font-proxima-nova-rg;
+                @include adaptiv-font(16.04, 11.04);
+                font-weight: 600;
+                text-transform: uppercase;
+                color: $color-white;
+            }
+            div {
+                .get-discout-panel-number {
+                    @extend .position-absolute-center;
+                    font-family: $font-helvetica-neue;
+                    font-weight: bold;
+                    font-style: normal;
+                    @include adaptiv-font(126.66, 50.66);
+                    color: $color-white;
+                }
+                .get-discout-panel-betwe-number {
+                    position: absolute;
+                    top: 33px;
+                    left: 0%;
+                    //color: #321c0a;
+                    height: 2px;
+                    width: 100%;
+                    background-color: #321c0a;
+                }
+            }
+            div:last-child {
+                margin-top: 40px;
+                display: flex;
+                justify-content: center;
+                grid-column-start: 1;
+                grid-column-end: 5;
+            }
+
+            #get-discount-btn {
+                padding: 20px 75px;
+                border: 1px solid $color-white;
+                border-radius: 40px;
+                background: transparent;
+                font-family: $font-montserrat;
+                @include adaptiv-font(19.73, 15.73);
+                font-weight: 900;
+                text-transform: uppercase;
+                color: $color-white;
+                cursor: pointer;
             }
         }
     }

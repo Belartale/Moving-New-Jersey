@@ -9,7 +9,7 @@
 .position-relative {
   position: relative; }
 
-.position-absolute-center {
+.position-absolute-center, body .get-discount .get-discount-grid-time div .get-discout-panel-number {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -33,6 +33,9 @@
   @media (min-width: 767px) {
     .text-inside-button {
       font-size: calc( 10.73px + 9 * (100vw / 1920)); } }
+
+.display-block {
+  display: block; }
 
 .color-white {
   color: white; }
@@ -103,6 +106,7 @@ body header .header-img-background-room {
         font-family: "Montserrat";
         text-transform: uppercase;
         font-weight: 600;
+        line-height: -110px;
         color: white; }
         @media (max-width: 767px) {
           body header .header-img-background-room .header-top .logo-text a {
@@ -144,19 +148,27 @@ body header .header-img-background-room {
           @media (min-width: 767px) {
             body header .header-img-background-room .header-top nav ul li a {
               font-size: calc( 7.55px + 6 * (100vw / 1920)); } }
-    body header .header-img-background-room .header-top .header-img-phone {
-      height: 21px;
-      width: 24px; }
-    body header .header-img-background-room .header-top .header-img-phone-number {
-      margin: 0 10px;
-      font-family: "Montserrat";
-      font-weight: 900; }
-      @media (max-width: 767px) {
-        body header .header-img-background-room .header-top .header-img-phone-number {
-          font-size: calc( 16.94px + 8.5 * ((100vw - 320px) / 1920)); } }
-      @media (min-width: 767px) {
-        body header .header-img-background-room .header-top .header-img-phone-number {
-          font-size: calc( 16.94px + 5 * (100vw / 1920)); } }
+    body header .header-img-background-room .header-top #show-phone {
+      position: relative;
+      display: flex;
+      align-items: center;
+      cursor: pointer; }
+      body header .header-img-background-room .header-top #show-phone .header-img-phone {
+        height: 21px;
+        width: 24px; }
+      body header .header-img-background-room .header-top #show-phone .header-img-phone-number {
+        margin: 0 10px;
+        font-family: "Montserrat";
+        font-weight: 900; }
+        @media (max-width: 767px) {
+          body header .header-img-background-room .header-top #show-phone .header-img-phone-number {
+            font-size: calc( 16.94px + 8.5 * ((100vw - 320px) / 1920)); } }
+        @media (min-width: 767px) {
+          body header .header-img-background-room .header-top #show-phone .header-img-phone-number {
+            font-size: calc( 16.94px + 5 * (100vw / 1920)); } }
+      body header .header-img-background-room .header-top #show-phone .header-img-arrow {
+        height: 6px;
+        width: 11px; }
   body header .header-img-background-room .header-yellow-line {
     width: 100%;
     height: 7px;
@@ -223,7 +235,7 @@ body .feedback {
         body .feedback .feedback-form #feedback-inside form .feedback-form-input {
           margin-top: 50px;
           padding-left: 20px;
-          height: 60px;
+          height: 65px;
           width: 300px;
           background: transparent;
           border: 1px solid white;
@@ -238,16 +250,17 @@ body .feedback {
           position: absolute;
           top: 50%;
           left: 50%;
-          transform: translate(130%, -8%);
+          transform: translate(130%, -13%);
           border: none;
           border-radius: 35px;
-          width: 200px !important;
-          height: 60px !important;
+          width: 200px;
+          height: 65px;
           font-family: "Montserrat";
           font-weight: 900;
           text-transform: uppercase;
           background-color: white;
-          color: #474747; }
+          color: #474747;
+          cursor: pointer; }
           @media (max-width: 767px) {
             body .feedback .feedback-form #feedback-inside form .feedback-form-submit {
               font-size: calc( 10px + 6.8 * ((100vw - 320px) / 1920)); } }
@@ -380,7 +393,8 @@ body .get-free-quote {
       margin-top: 30px; }
     body .get-free-quote .get-free-quote-text-form form #get-free-quote-form-submit {
       background-color: #ff7101;
-      font-weight: 900; }
+      font-weight: 900;
+      cursor: pointer; }
 
 body .few-of-us-in-numbers {
   padding-top: 110px;
@@ -422,3 +436,69 @@ body .few-of-us-in-numbers {
       @media (min-width: 767px) {
         body .few-of-us-in-numbers .wrapper .few-of-us-in-numbers-grid .few-of-us-in-numbers-grid-text {
           font-size: calc( 15px + 4 * (100vw / 1920)); } }
+
+body .get-discount {
+  padding-top: 100px;
+  padding-bottom: 85px;
+  background-image: url(../img/get-discount-happy-peaple.png);
+  background-size: cover;
+  background-position: center; }
+  body .get-discount .get-discount-grid-time {
+    margin-top: 90px;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(4, auto);
+    grid-template-rows: repeat(3, auto);
+    grid-column-gap: 45px;
+    grid-row-gap: 30px; }
+    body .get-discount .get-discount-grid-time .get-discount-grid-time-text {
+      font-family: "Proxima Nova Rg";
+      font-weight: 600;
+      text-transform: uppercase;
+      color: white; }
+      @media (max-width: 767px) {
+        body .get-discount .get-discount-grid-time .get-discount-grid-time-text {
+          font-size: calc( 11.04px + 8.5 * ((100vw - 320px) / 1920)); } }
+      @media (min-width: 767px) {
+        body .get-discount .get-discount-grid-time .get-discount-grid-time-text {
+          font-size: calc( 11.04px + 5 * (100vw / 1920)); } }
+    body .get-discount .get-discount-grid-time div .get-discout-panel-number {
+      font-family: "HelveticaNeueCyr";
+      font-weight: bold;
+      font-style: normal;
+      color: white; }
+      @media (max-width: 767px) {
+        body .get-discount .get-discount-grid-time div .get-discout-panel-number {
+          font-size: calc( 50.66px + 129.2 * ((100vw - 320px) / 1920)); } }
+      @media (min-width: 767px) {
+        body .get-discount .get-discount-grid-time div .get-discout-panel-number {
+          font-size: calc( 50.66px + 76 * (100vw / 1920)); } }
+    body .get-discount .get-discount-grid-time div .get-discout-panel-betwe-number {
+      position: absolute;
+      top: 33px;
+      left: 0%;
+      height: 2px;
+      width: 100%;
+      background-color: #321c0a; }
+    body .get-discount .get-discount-grid-time div:last-child {
+      margin-top: 40px;
+      display: flex;
+      justify-content: center;
+      grid-column-start: 1;
+      grid-column-end: 5; }
+    body .get-discount .get-discount-grid-time #get-discount-btn {
+      padding: 20px 75px;
+      border: 1px solid white;
+      border-radius: 40px;
+      background: transparent;
+      font-family: "Montserrat";
+      font-weight: 900;
+      text-transform: uppercase;
+      color: white;
+      cursor: pointer; }
+      @media (max-width: 767px) {
+        body .get-discount .get-discount-grid-time #get-discount-btn {
+          font-size: calc( 15.73px + 6.8 * ((100vw - 320px) / 1920)); } }
+      @media (min-width: 767px) {
+        body .get-discount .get-discount-grid-time #get-discount-btn {
+          font-size: calc( 15.73px + 4 * (100vw / 1920)); } }

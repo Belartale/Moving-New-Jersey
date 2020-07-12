@@ -59,6 +59,9 @@ $maxWrapper: 1180px;
     left: 50%;
     transform: translate(-50%, -50%);
 }
+.friend-bonus-img-little-arrow {
+    margin: 0 auto;
+}
 .text-center {
     text-align: center;
 }
@@ -81,6 +84,9 @@ $maxWrapper: 1180px;
 }
 .color-blue {
     color: $color-blue;
+}
+.color-yellow {
+    color: $colro-yellow;
 }
 //! fonts-classes
 .text-true-center {
@@ -121,6 +127,19 @@ $maxWrapper: 1180px;
 .text-middle-blue {
     @extend .text-middle-white;
     color: $color-blue;
+}
+
+.friend-bonus-small-text-blue {
+    font-family: $font-proxima-nova-rg;
+    @include adaptiv-font(13.6, 8.6);
+    font-weight: normal;
+    font-style: normal;
+    text-transform: uppercase;
+    color: $color-blue;
+}
+.friend-bonus-small-text-yellow {
+    @extend .friend-bonus-small-text-blue;
+    color: $colro-yellow;
 }
 
 body {
@@ -165,7 +184,7 @@ body {
                 }
                 nav {
                     ul {
-                        margin-right: 55px;
+                        margin-right: 50px;
                         padding: 0px;
                         display: flex;
                         li {
@@ -186,19 +205,41 @@ body {
                     display: flex;
                     align-items: center;
                     cursor: pointer;
-                    .header-img-phone {
-                        height: 21px;
-                        width: 24px;
+                    summary {
+                        position: relative;
+                        display: flex;
+                        align-items: center;
+                        &::-webkit-details-marker {
+                            position: absolute;
+                            left: 220px;
+                            color: #ff7101;
+                        }
+                        .header-img-phone {
+                            height: 21px;
+                            width: 24px;
+                        }
+                        .header-img-phone-number {
+                            margin: 0 10px;
+                            font-family: $font-montserrat;
+                            @include adaptiv-font(21.94, 16.94);
+                            font-weight: 900;
+                        }
+                        .header-img-arrow {
+                            height: 6px;
+                            width: 11px;
+                        }
+                        &:after {
+                            list-style-image: url(../img/header-img-arrow.png);
+                        }
                     }
-                    .header-img-phone-number {
-                        margin: 0 10px;
+                    li {
+                        margin-bottom: 10px;
+                        list-style: none;
                         font-family: $font-montserrat;
-                        @include adaptiv-font(21.94, 16.94);
-                        font-weight: 900;
-                    }
-                    .header-img-arrow {
-                        height: 6px;
-                        width: 11px;
+                        @include adaptiv-font(13.55, 7.55);
+                        text-transform: uppercase;
+                        font-weight: 600;
+                        color: $color-white;
                     }
                 }
             }
@@ -265,7 +306,7 @@ body {
                 position: absolute;
                 top: 50%;
                 left: 0%;
-                transform: translate(-40%, -57%);
+                transform: translate(-40%, -56%);
             }
             #feedback-inside {
                 margin-left: 220px;
@@ -422,8 +463,6 @@ body {
                     border: 1px solid $color-gray;
                     border-radius: 35px;
                     @extend .input-style-text;
-                    appearance: none;
-                    //todo нужно убрать маркет!!!!!!!!!!!!!!!!!!!!!!!
                 }
                 #user-text {
                     width: 100%;
@@ -515,7 +554,6 @@ body {
                     position: absolute;
                     top: 33px;
                     left: 0%;
-                    //color: #321c0a;
                     height: 2px;
                     width: 100%;
                     background-color: #321c0a;
@@ -528,7 +566,6 @@ body {
                 grid-column-start: 1;
                 grid-column-end: 5;
             }
-
             #get-discount-btn {
                 padding: 20px 75px;
                 border: 1px solid $color-white;
@@ -543,5 +580,199 @@ body {
             }
         }
     }
+    .friend-bonus {
+        @extend .position-relative;
+        padding-top: 95px;
+        padding-bottom: 100px;
+        .friend-bonus-map-top-text {
+            margin-top: 70px;
+            margin-bottom: 80px;
+        }
+        .friend-bonus-img-big-arrow {
+            @extend .position-absolute-center;
+            top: 340px;
+        }
+        .friend-bonus-map-grid {
+            @extend .text-center;
+            margin-bottom: 30px;
+            display: grid;
+            justify-items: center;
+            align-items: center;
+            grid-template-columns: auto 160px auto 160px auto;
+            grid-template-rows: repeat(2, auto);
+            grid-column-gap: 10px;
+            grid-row-gap: 20px;
+            div:nth-of-type(1) {
+                grid-column-start: 1;
+                grid-column-end: 3;
+                grid-row-start: 1;
+                grid-row-end: 2;
+            }
+            div:nth-of-type(3) {
+                grid-column-start: 4;
+                grid-column-end: 6;
+                grid-row-start: 1;
+                grid-row-end: 2;
+            }
+            .friend-bonus-map-grid-text-one {
+                margin-right: 165px;
+            }
+            .friend-bonus-map-grid-text-two {
+                margin-left: 180px;
+            }
+        }
+        .friend-bonus-map-bottom-text {
+            max-width: 790px;
+            margin: 0 auto;
+            font-family: $font-proxima-nova-rg;
+            @include adaptiv-font(22, 14);
+            font-weight: normal;
+            font-style: normal;
+            color: $colro-yellow;
+        }
+    }
+    .our-company-yellow-line {
+        height: 20px;
+        width: 704px;
+        background-color: $colro-yellow;
+    }
+    .our-company {
+        padding-top: 80px;
+        padding-bottom: 60px;
+        background-image: url(../img/our-company-background.png);
+        background-size: cover;
+        background-position: center;
+        h2 {
+            margin-bottom: 50px;
+        }
+        .our-company-inside {
+            display: flex;
+            img {
+                margin-right: 60px;
+            }
+            .our-company-inside-text {
+                font-family: $font-proxima-nova-rg;
+                @include adaptiv-font(16, 12);
+                font-weight: 600;
+                font-style: normal;
+                color: $color-white;
+            }
+            .our-company-inside-text:nth-of-type(1) {
+                margin-bottom: 35px;
+            }
+        }
+        .our-company-man-ceo {
+            margin-top: 48px;
+            border: 1px solid $colro-yellow;
+            padding: 15px 50px 35px 30px;
+            div {
+                margin-top: 25px;
+                h3 {
+                    font-family: $font-proxima-nova-bl;
+                    @include adaptiv-font(18.09, 14.09);
+                    text-transform: uppercase;
+                    color: $color-white;
+                }
+                p {
+                    font-family: $font-proxima-nova-rg;
+                    @include adaptiv-font(16, 10);
+                    color: $color-white;
+                }
+            }
+        }
+    }
+    .questions {
+        padding-top: 90px;
+        padding-bottom: 70px;
+
+        details:nth-of-type(1) {
+            margin-top: 70px;
+        }
+        details {
+            margin-top: 25px;
+            summary::-webkit-details-marker {
+                display: none;
+            }
+            & > summary {
+                list-style: none;
+            }
+            summary:before {
+                position: relative;
+                top: 6px;
+                content: url(../img/questions-img-details-open.png);
+                margin-right: 35px;
+            }
+            &[open] summary:before {
+                content: url(../img/questions-img-details-close.png);
+            }
+            .questions-text-title {
+                font-family: $font-montserrat;
+                @include adaptiv-font(14, 10);
+                font-weight: 500;
+                font-style: normal;
+                color: $color-blue;
+            }
+            .questions-details {
+                position: relative;
+                display: inline-block;
+                .questions-details-side-line {
+                    position: absolute;
+                    top: 15px;
+                    left: 10px;
+                    height: 100%;
+                    width: 1px;
+                    background-color: #c6cbd3;
+                }
+                .questions-text {
+                    margin-top: 50px;
+                    margin-bottom: 50px;
+                    margin-left: 100px;
+                    font-family: $font-montserrat;
+                    @include adaptiv-font(14, 10);
+                    font-weight: 300;
+                    font-style: normal;
+                    color: $color-blue;
+                }
+            }
+        }
+    }
+    .ask-question {
+        padding-top: 70px;
+        padding-bottom: 70px;
+        background-image: url(../img/ask-question-background.png);
+        background-size: cover;
+        background-position: center;
+        .ask-question-two-column {
+            display: flex;
+            div:nth-of-type(1) {
+                width: 440px;
+                margin-right: 130px;
+                .ask-question-title {
+                    margin-bottom: 40px;
+                    font-family: $font-proxima-nova-bl;
+                    @include adaptiv-font(21.06, 22.67);
+                    text-transform: uppercase;
+                    color: $color-white;
+                }
+                .ask-question-text {
+                    font-family: $font-proxima-nova-rg;
+                    @include adaptiv-font(21.06, 22.67);
+                    text-transform: uppercase;
+                    color: $color-white;
+                }
+            }
+            form {
+                input {
+                    border: 1px solid #d1d1d1;
+                    border-radius: 35px;
+                    background: transparent;
+                    color: $color-white;
+                    @extend .input-style-text;
+                    padding: 0 20px;
+                }
+            }
+        }
+    }
 }
-//      few-of-us-in-numbers-img-.png
+//  questions-img-details.png
+// background: transparent;

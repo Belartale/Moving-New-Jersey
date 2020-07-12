@@ -6,16 +6,19 @@
   max-width: 1180px;
   margin: 0px auto; }
 
-.position-relative {
+.position-relative, body .friend-bonus {
   position: relative; }
 
-.position-absolute-center, body .get-discount .get-discount-grid-time div .get-discout-panel-number {
+.position-absolute-center, body .get-discount .get-discount-grid-time div .get-discout-panel-number, body .friend-bonus .friend-bonus-img-big-arrow {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%); }
 
-.text-center {
+.friend-bonus-img-little-arrow {
+  margin: 0 auto; }
+
+.text-center, body .friend-bonus .friend-bonus-map-grid {
   text-align: center; }
 
 .flex-vertical-center {
@@ -42,6 +45,9 @@
 
 .color-blue {
   color: #1c3051; }
+
+.color-yellow {
+  color: #ff7101; }
 
 .text-true-center {
   position: relative;
@@ -87,6 +93,22 @@
 .text-middle-blue {
   color: #1c3051; }
 
+.friend-bonus-small-text-blue, .friend-bonus-small-text-yellow {
+  font-family: "Proxima Nova Rg";
+  font-weight: normal;
+  font-style: normal;
+  text-transform: uppercase;
+  color: #1c3051; }
+  @media (max-width: 767px) {
+    .friend-bonus-small-text-blue, .friend-bonus-small-text-yellow {
+      font-size: calc( 8.6px + 8.5 * ((100vw - 320px) / 1920)); } }
+  @media (min-width: 767px) {
+    .friend-bonus-small-text-blue, .friend-bonus-small-text-yellow {
+      font-size: calc( 8.6px + 5 * (100vw / 1920)); } }
+
+.friend-bonus-small-text-yellow {
+  color: #ff7101; }
+
 body header .header-img-background-room {
   background-image: url(../img/header-img-background-room.png);
   background-size: cover;
@@ -131,7 +153,7 @@ body header .header-img-background-room {
         body header .header-img-background-room .header-top .header-vertical-line-after-text {
           font-size: calc( 9px + 4 * (100vw / 1920)); } }
     body header .header-img-background-room .header-top nav ul {
-      margin-right: 55px;
+      margin-right: 50px;
       padding: 0px;
       display: flex; }
       body header .header-img-background-room .header-top nav ul li {
@@ -153,22 +175,45 @@ body header .header-img-background-room {
       display: flex;
       align-items: center;
       cursor: pointer; }
-      body header .header-img-background-room .header-top #show-phone .header-img-phone {
-        height: 21px;
-        width: 24px; }
-      body header .header-img-background-room .header-top #show-phone .header-img-phone-number {
-        margin: 0 10px;
+      body header .header-img-background-room .header-top #show-phone summary {
+        position: relative;
+        display: flex;
+        align-items: center; }
+        body header .header-img-background-room .header-top #show-phone summary::-webkit-details-marker {
+          position: absolute;
+          left: 220px;
+          color: #ff7101; }
+        body header .header-img-background-room .header-top #show-phone summary .header-img-phone {
+          height: 21px;
+          width: 24px; }
+        body header .header-img-background-room .header-top #show-phone summary .header-img-phone-number {
+          margin: 0 10px;
+          font-family: "Montserrat";
+          font-weight: 900; }
+          @media (max-width: 767px) {
+            body header .header-img-background-room .header-top #show-phone summary .header-img-phone-number {
+              font-size: calc( 16.94px + 8.5 * ((100vw - 320px) / 1920)); } }
+          @media (min-width: 767px) {
+            body header .header-img-background-room .header-top #show-phone summary .header-img-phone-number {
+              font-size: calc( 16.94px + 5 * (100vw / 1920)); } }
+        body header .header-img-background-room .header-top #show-phone summary .header-img-arrow {
+          height: 6px;
+          width: 11px; }
+        body header .header-img-background-room .header-top #show-phone summary:after {
+          list-style-image: url(../img/header-img-arrow.png); }
+      body header .header-img-background-room .header-top #show-phone li {
+        margin-bottom: 10px;
+        list-style: none;
         font-family: "Montserrat";
-        font-weight: 900; }
+        text-transform: uppercase;
+        font-weight: 600;
+        color: white; }
         @media (max-width: 767px) {
-          body header .header-img-background-room .header-top #show-phone .header-img-phone-number {
-            font-size: calc( 16.94px + 8.5 * ((100vw - 320px) / 1920)); } }
+          body header .header-img-background-room .header-top #show-phone li {
+            font-size: calc( 7.55px + 10.2 * ((100vw - 320px) / 1920)); } }
         @media (min-width: 767px) {
-          body header .header-img-background-room .header-top #show-phone .header-img-phone-number {
-            font-size: calc( 16.94px + 5 * (100vw / 1920)); } }
-      body header .header-img-background-room .header-top #show-phone .header-img-arrow {
-        height: 6px;
-        width: 11px; }
+          body header .header-img-background-room .header-top #show-phone li {
+            font-size: calc( 7.55px + 6 * (100vw / 1920)); } }
   body header .header-img-background-room .header-yellow-line {
     width: 100%;
     height: 7px;
@@ -223,7 +268,7 @@ body .feedback {
       position: absolute;
       top: 50%;
       left: 0%;
-      transform: translate(-40%, -57%); }
+      transform: translate(-40%, -56%); }
     body .feedback .feedback-form #feedback-inside {
       margin-left: 220px; }
       body .feedback .feedback-form #feedback-inside h3 {
@@ -365,16 +410,16 @@ body .get-free-quote {
       border-radius: 35px; }
     body .get-free-quote .get-free-quote-text-form form .get-free-quote-input-indent {
       margin-right: 30px; }
-    body .get-free-quote .get-free-quote-text-form form .input-style-text, body .get-free-quote .get-free-quote-text-form form input, body .get-free-quote .get-free-quote-text-form form select {
+    body .get-free-quote .get-free-quote-text-form form .input-style-text, body .get-free-quote .get-free-quote-text-form form input, body .get-free-quote .get-free-quote-text-form form select, body .get-free-quote .get-free-quote-text-form .ask-question .ask-question-two-column form input, body .ask-question .ask-question-two-column .get-free-quote .get-free-quote-text-form form input {
       padding: 0 20px;
       font-family: "Montserrat";
       font-weight: bold;
       color: white; }
       @media (max-width: 767px) {
-        body .get-free-quote .get-free-quote-text-form form .input-style-text, body .get-free-quote .get-free-quote-text-form form input, body .get-free-quote .get-free-quote-text-form form select {
+        body .get-free-quote .get-free-quote-text-form form .input-style-text, body .get-free-quote .get-free-quote-text-form form input, body .get-free-quote .get-free-quote-text-form form select, body .get-free-quote .get-free-quote-text-form .ask-question .ask-question-two-column form input, body .ask-question .ask-question-two-column .get-free-quote .get-free-quote-text-form form input {
           font-size: calc( 10px + 6.8 * ((100vw - 320px) / 1920)); } }
       @media (min-width: 767px) {
-        body .get-free-quote .get-free-quote-text-form form .input-style-text, body .get-free-quote .get-free-quote-text-form form input, body .get-free-quote .get-free-quote-text-form form select {
+        body .get-free-quote .get-free-quote-text-form form .input-style-text, body .get-free-quote .get-free-quote-text-form form input, body .get-free-quote .get-free-quote-text-form form select, body .get-free-quote .get-free-quote-text-form .ask-question .ask-question-two-column form input, body .ask-question .ask-question-two-column .get-free-quote .get-free-quote-text-form form input {
           font-size: calc( 10px + 4 * (100vw / 1920)); } }
     body .get-free-quote .get-free-quote-text-form form select {
       margin-top: 19px;
@@ -382,8 +427,7 @@ body .get-free-quote {
       height: 50px;
       background: transparent;
       border: 1px solid #727a88;
-      border-radius: 35px;
-      appearance: none; }
+      border-radius: 35px; }
     body .get-free-quote .get-free-quote-text-form form #user-text {
       width: 100%;
       height: 140px; }
@@ -502,3 +546,197 @@ body .get-discount {
       @media (min-width: 767px) {
         body .get-discount .get-discount-grid-time #get-discount-btn {
           font-size: calc( 15.73px + 4 * (100vw / 1920)); } }
+
+body .friend-bonus {
+  padding-top: 95px;
+  padding-bottom: 100px; }
+  body .friend-bonus .friend-bonus-map-top-text {
+    margin-top: 70px;
+    margin-bottom: 80px; }
+  body .friend-bonus .friend-bonus-img-big-arrow {
+    top: 340px; }
+  body .friend-bonus .friend-bonus-map-grid {
+    margin-bottom: 30px;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: auto 160px auto 160px auto;
+    grid-template-rows: repeat(2, auto);
+    grid-column-gap: 10px;
+    grid-row-gap: 20px; }
+    body .friend-bonus .friend-bonus-map-grid div:nth-of-type(1) {
+      grid-column-start: 1;
+      grid-column-end: 3;
+      grid-row-start: 1;
+      grid-row-end: 2; }
+    body .friend-bonus .friend-bonus-map-grid div:nth-of-type(3) {
+      grid-column-start: 4;
+      grid-column-end: 6;
+      grid-row-start: 1;
+      grid-row-end: 2; }
+    body .friend-bonus .friend-bonus-map-grid .friend-bonus-map-grid-text-one {
+      margin-right: 165px; }
+    body .friend-bonus .friend-bonus-map-grid .friend-bonus-map-grid-text-two {
+      margin-left: 180px; }
+  body .friend-bonus .friend-bonus-map-bottom-text {
+    max-width: 790px;
+    margin: 0 auto;
+    font-family: "Proxima Nova Rg";
+    font-weight: normal;
+    font-style: normal;
+    color: #ff7101; }
+    @media (max-width: 767px) {
+      body .friend-bonus .friend-bonus-map-bottom-text {
+        font-size: calc( 14px + 13.6 * ((100vw - 320px) / 1920)); } }
+    @media (min-width: 767px) {
+      body .friend-bonus .friend-bonus-map-bottom-text {
+        font-size: calc( 14px + 8 * (100vw / 1920)); } }
+
+body .our-company-yellow-line {
+  height: 20px;
+  width: 704px;
+  background-color: #ff7101; }
+
+body .our-company {
+  padding-top: 80px;
+  padding-bottom: 60px;
+  background-image: url(../img/our-company-background.png);
+  background-size: cover;
+  background-position: center; }
+  body .our-company h2 {
+    margin-bottom: 50px; }
+  body .our-company .our-company-inside {
+    display: flex; }
+    body .our-company .our-company-inside img {
+      margin-right: 60px; }
+    body .our-company .our-company-inside .our-company-inside-text {
+      font-family: "Proxima Nova Rg";
+      font-weight: 600;
+      font-style: normal;
+      color: white; }
+      @media (max-width: 767px) {
+        body .our-company .our-company-inside .our-company-inside-text {
+          font-size: calc( 12px + 6.8 * ((100vw - 320px) / 1920)); } }
+      @media (min-width: 767px) {
+        body .our-company .our-company-inside .our-company-inside-text {
+          font-size: calc( 12px + 4 * (100vw / 1920)); } }
+    body .our-company .our-company-inside .our-company-inside-text:nth-of-type(1) {
+      margin-bottom: 35px; }
+  body .our-company .our-company-man-ceo {
+    margin-top: 48px;
+    border: 1px solid #ff7101;
+    padding: 15px 50px 35px 30px; }
+    body .our-company .our-company-man-ceo div {
+      margin-top: 25px; }
+      body .our-company .our-company-man-ceo div h3 {
+        font-family: "Proxima Nova Bl";
+        text-transform: uppercase;
+        color: white; }
+        @media (max-width: 767px) {
+          body .our-company .our-company-man-ceo div h3 {
+            font-size: calc( 14.09px + 6.8 * ((100vw - 320px) / 1920)); } }
+        @media (min-width: 767px) {
+          body .our-company .our-company-man-ceo div h3 {
+            font-size: calc( 14.09px + 4 * (100vw / 1920)); } }
+      body .our-company .our-company-man-ceo div p {
+        font-family: "Proxima Nova Rg";
+        color: white; }
+        @media (max-width: 767px) {
+          body .our-company .our-company-man-ceo div p {
+            font-size: calc( 10px + 10.2 * ((100vw - 320px) / 1920)); } }
+        @media (min-width: 767px) {
+          body .our-company .our-company-man-ceo div p {
+            font-size: calc( 10px + 6 * (100vw / 1920)); } }
+
+body .questions {
+  padding-top: 90px;
+  padding-bottom: 70px; }
+  body .questions details:nth-of-type(1) {
+    margin-top: 70px; }
+  body .questions details {
+    margin-top: 25px; }
+    body .questions details summary::-webkit-details-marker {
+      display: none; }
+    body .questions details > summary {
+      list-style: none; }
+    body .questions details summary:before {
+      position: relative;
+      top: 6px;
+      content: url(../img/questions-img-details-open.png);
+      margin-right: 35px; }
+    body .questions details[open] summary:before {
+      content: url(../img/questions-img-details-close.png); }
+    body .questions details .questions-text-title {
+      font-family: "Montserrat";
+      font-weight: 500;
+      font-style: normal;
+      color: #1c3051; }
+      @media (max-width: 767px) {
+        body .questions details .questions-text-title {
+          font-size: calc( 10px + 6.8 * ((100vw - 320px) / 1920)); } }
+      @media (min-width: 767px) {
+        body .questions details .questions-text-title {
+          font-size: calc( 10px + 4 * (100vw / 1920)); } }
+    body .questions details .questions-details {
+      position: relative;
+      display: inline-block; }
+      body .questions details .questions-details .questions-details-side-line {
+        position: absolute;
+        top: 15px;
+        left: 10px;
+        height: 100%;
+        width: 1px;
+        background-color: #c6cbd3; }
+      body .questions details .questions-details .questions-text {
+        margin-top: 50px;
+        margin-bottom: 50px;
+        margin-left: 100px;
+        font-family: "Montserrat";
+        font-weight: 300;
+        font-style: normal;
+        color: #1c3051; }
+        @media (max-width: 767px) {
+          body .questions details .questions-details .questions-text {
+            font-size: calc( 10px + 6.8 * ((100vw - 320px) / 1920)); } }
+        @media (min-width: 767px) {
+          body .questions details .questions-details .questions-text {
+            font-size: calc( 10px + 4 * (100vw / 1920)); } }
+
+body .ask-question {
+  padding-top: 70px;
+  padding-bottom: 70px;
+  background-image: url(../img/ask-question-background.png);
+  background-size: cover;
+  background-position: center; }
+  body .ask-question .ask-question-two-column {
+    display: flex; }
+    body .ask-question .ask-question-two-column div:nth-of-type(1) {
+      width: 440px;
+      margin-right: 130px; }
+      body .ask-question .ask-question-two-column div:nth-of-type(1) .ask-question-title {
+        margin-bottom: 40px;
+        font-family: "Proxima Nova Bl";
+        text-transform: uppercase;
+        color: white; }
+        @media (max-width: 767px) {
+          body .ask-question .ask-question-two-column div:nth-of-type(1) .ask-question-title {
+            font-size: calc( 22.67px + -2.737 * ((100vw - 320px) / 1920)); } }
+        @media (min-width: 767px) {
+          body .ask-question .ask-question-two-column div:nth-of-type(1) .ask-question-title {
+            font-size: calc( 22.67px + -1.61 * (100vw / 1920)); } }
+      body .ask-question .ask-question-two-column div:nth-of-type(1) .ask-question-text {
+        font-family: "Proxima Nova Rg";
+        text-transform: uppercase;
+        color: white; }
+        @media (max-width: 767px) {
+          body .ask-question .ask-question-two-column div:nth-of-type(1) .ask-question-text {
+            font-size: calc( 22.67px + -2.737 * ((100vw - 320px) / 1920)); } }
+        @media (min-width: 767px) {
+          body .ask-question .ask-question-two-column div:nth-of-type(1) .ask-question-text {
+            font-size: calc( 22.67px + -1.61 * (100vw / 1920)); } }
+    body .ask-question .ask-question-two-column form input {
+      border: 1px solid #d1d1d1;
+      border-radius: 35px;
+      background: transparent;
+      color: white;
+      padding: 0 20px; }

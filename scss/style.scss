@@ -291,6 +291,7 @@ body {
             }
         }
     }
+
     .feedback {
         padding-top: 70px;
         padding-bottom: 75px;
@@ -354,6 +355,7 @@ body {
             }
         }
     }
+
     .services {
         padding-top: 110px;
         padding-bottom: 107px;
@@ -364,10 +366,9 @@ body {
             left: 18%; */
             position: relative;
             top: 50%;
-            left: 50%;
+            left: 68%;
             transform: translate(-50%, -50%);
             span {
-                text-align: center;
             }
         }
         .services-lot-img {
@@ -407,6 +408,7 @@ body {
             }
         }
     }
+
     .get-free-quote-yellow-line {
         float: right;
         height: 12px;
@@ -489,6 +491,7 @@ body {
             }
         }
     }
+
     .few-of-us-in-numbers {
         padding-top: 110px;
         padding-bottom: 180px;
@@ -529,6 +532,7 @@ body {
             }
         }
     }
+
     .get-discount {
         padding-top: 100px;
         padding-bottom: 85px;
@@ -589,6 +593,7 @@ body {
             }
         }
     }
+
     .friend-bonus {
         @extend .position-relative;
         padding-top: 95px;
@@ -640,11 +645,13 @@ body {
             color: $colro-yellow;
         }
     }
+
     .our-company-yellow-line {
         height: 20px;
         width: 704px;
         background-color: $colro-yellow;
     }
+
     .our-company {
         padding-top: 80px;
         padding-bottom: 60px;
@@ -690,6 +697,7 @@ body {
             }
         }
     }
+
     .questions {
         padding-top: 90px;
         padding-bottom: 70px;
@@ -748,6 +756,7 @@ body {
             }
         }
     }
+
     .ask-question {
         padding-top: 70px;
         padding-bottom: 70px;
@@ -823,6 +832,7 @@ body {
             }
         }
     }
+
     .slider-reviews {
         position: relative;
         padding-top: 90px;
@@ -938,12 +948,14 @@ body {
             z-index: -1;
         }
     }
+
     .map {
         img {
             height: 100%;
             width: 100%;
         }
     }
+
     footer {
         padding-top: 50px;
         padding-bottom: 45px;
@@ -953,6 +965,7 @@ body {
             align-items: center;
 
             .this-website {
+                margin-right: 60px;
                 font-family: $font-proxima-nova-bl;
                 @include adaptiv-font(20.38, 14.38);
                 font-weight: 900;
@@ -960,13 +973,12 @@ body {
                 color: $color-white;
             }
             img:nth-of-type(1) {
-                margin-left: 60px;
                 margin-right: 20px;
             }
             img:nth-of-type(2) {
             }
             .link-webcase {
-                margin-left: 575px;
+                margin-left: 540px;
                 font-family: $font-proxima-nova-rg;
                 @include adaptiv-font(14, 10);
                 font-weight: bold;

@@ -323,10 +323,8 @@ body .services {
             left: 18%; */
     position: relative;
     top: 50%;
-    left: 50%;
+    left: 68%;
     transform: translate(-50%, -50%); }
-    body .services .services-title span {
-      text-align: center; }
   body .services .services-lot-img {
     position: relative;
     display: flex;
@@ -905,6 +903,7 @@ body footer {
     display: flex;
     align-items: center; }
     body footer div .this-website {
+      margin-right: 60px;
       font-family: "Proxima Nova Bl";
       font-weight: 900;
       font-style: normal;
@@ -916,10 +915,9 @@ body footer {
         body footer div .this-website {
           font-size: calc( 14.38px + 6 * (100vw / 1920)); } }
     body footer div img:nth-of-type(1) {
-      margin-left: 60px;
       margin-right: 20px; }
     body footer div .link-webcase {
-      margin-left: 575px;
+      margin-left: 540px;
       font-family: "Proxima Nova Rg";
       font-weight: bold;
       color: white; }

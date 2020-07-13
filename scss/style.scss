@@ -357,17 +357,25 @@ body {
     .services {
         padding-top: 110px;
         padding-bottom: 107px;
-        h2 {
-            margin-bottom: 85px;
+        .services-title {
+            /* margin-bottom: 85px;
             position: relative;
             top: 0%;
-            left: 18%;
+            left: 18%; */
+            position: relative;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            span {
+                text-align: center;
+            }
         }
         .services-lot-img {
             position: relative;
             display: flex;
             border: 1px solid $colro-yellow;
             padding: 105px 37.5px 85px;
+            width: 100%;
             .services-lot-img-title {
                 display: flex;
                 position: absolute;
@@ -484,18 +492,19 @@ body {
     .few-of-us-in-numbers {
         padding-top: 110px;
         padding-bottom: 180px;
+        .few-of-us-in-numbers-yellow-line {
+            z-index: -6;
+            position: absolute;
+            top: 360px;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            height: 1px;
+            width: 100%;
+            background-color: $colro-yellow;
+        }
         .wrapper {
             h3 {
                 margin-bottom: 90px;
-            }
-            .few-of-us-in-numbers-yellow-line {
-                z-index: -6;
-                position: relative;
-                top: 120px;
-                left: -400px;
-                height: 1px;
-                width: 2000px;
-                background-color: $colro-yellow;
             }
             .few-of-us-in-numbers-grid {
                 display: grid;
@@ -504,7 +513,7 @@ body {
                 grid-template-rows: repeat(3, auto);
                 grid-column-gap: 130px;
                 div {
-                    background-color: white;
+                    background-color: $color-white;
                 }
                 .few-of-us-in-numbers-grid-number {
                     font-family: $font-proxima-nova-bl;
@@ -701,9 +710,11 @@ body {
                 top: 6px;
                 content: url(../img/questions-img-details-open.png);
                 margin-right: 35px;
+                cursor: pointer;
             }
             &[open] summary:before {
                 content: url(../img/questions-img-details-close.png);
+                cursor: pointer;
             }
             .questions-text-title {
                 font-family: $font-montserrat;
@@ -789,6 +800,7 @@ body {
                     background: transparent;
                     background-color: $color-white;
                     color: $color-blue;
+                    cursor: pointer;
                 }
                 #ask-full-name {
                     height: 50px;
@@ -812,9 +824,11 @@ body {
         }
     }
     .slider-reviews {
+        position: relative;
         padding-top: 90px;
-        padding-bottom: 500px;
+        padding-bottom: 550px;
         .slider {
+            z-index: 100;
             * {
                 box-sizing: border-box;
             }
@@ -828,7 +842,6 @@ body {
                     display: none;
                     padding: 80px;
                     text-align: center;
-                    //todooooooooooooooooooooooooooooooooooooooooooooooo
                     .mySlides-inside {
                         display: flex;
                         justify-content: space-between;
@@ -841,22 +854,26 @@ body {
                                 height: 105px;
                                 width: 105px;
                             }
-                            div {
+                            .slider-right-text {
                                 top: 10px;
                                 position: relative;
-                                img,
-                                .slider-title {
-                                    display: inline-block;
-                                    position: flex;
-                                }
-                                .slider-title {
-                                    bottom: 10px;
-                                    font-family: $font-montserrat;
-                                    @include adaptiv-font(14.78, 10.78);
-                                    text-transform: uppercase;
-                                    color: $colro-yellow;
+                                span {
+                                    display: flex;
+                                    align-items: center;
+                                    img {
+                                        margin-right: 10px;
+                                        height: 31px;
+                                        width: 31px;
+                                    }
+                                    .slider-title {
+                                        font-family: $font-montserrat;
+                                        @include adaptiv-font(14.78, 10.78);
+                                        text-transform: uppercase;
+                                        color: $colro-yellow;
+                                    }
                                 }
                                 .slider-text {
+                                    display: block;
                                     margin-top: 10px;
                                     @include adaptiv-font(12.93, 8.93);
                                     font-weight: bold;
@@ -911,11 +928,54 @@ body {
             .dot:hover {
                 background-color: $color-blue;
             }
-            q {
-                font-style: italic;
+        }
+        .slider-reviews-background {
+            position: absolute;
+            top: 70%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            bottom: 300px;
+            z-index: -1;
+        }
+    }
+    .map {
+        img {
+            height: 100%;
+            width: 100%;
+        }
+    }
+    footer {
+        padding-top: 50px;
+        padding-bottom: 45px;
+        background-color: $color-blue;
+        div {
+            display: flex;
+            align-items: center;
+
+            .this-website {
+                font-family: $font-proxima-nova-bl;
+                @include adaptiv-font(20.38, 14.38);
+                font-weight: 900;
+                font-style: normal;
+                color: $color-white;
+            }
+            img:nth-of-type(1) {
+                margin-left: 60px;
+                margin-right: 20px;
+            }
+            img:nth-of-type(2) {
+            }
+            .link-webcase {
+                margin-left: 575px;
+                font-family: $font-proxima-nova-rg;
+                @include adaptiv-font(14, 10);
+                font-weight: bold;
+                color: $color-white;
             }
         }
     }
 }
 //  questions-img-details.png
 // background: transparent;
+
+//! срол иза h2 services

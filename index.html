@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Document</title>
+        <title>Njlocal Moving</title>
         <link rel="stylesheet" href="css/nulling-style.css" />
         <link rel="stylesheet" href="fonts/Montserrat/stylesheet.css" />
         <link rel="stylesheet" href="fonts/ProximaNova/stylesheet.css" />
@@ -11,7 +11,7 @@
         <link rel="stylesheet" href="css/style.css" />
     </head>
     <body>
-        <header>
+        <header id="njlocal-moving">
             <div class="header-img-background-room">
                 <div class="header-top">
                     <div class="wrapper flex-vertical-center color-white">
@@ -42,7 +42,7 @@
                                 </li>
                                 <li><a href="#nav-faqs">FAQs</a></li>
                                 <li><a href="#nav-reviews">Reviews</a></li>
-                                <li><a href="#nav-about us">About us</a></li>
+                                <li><a href="#nav-about-us">About us</a></li>
                             </ul>
                         </nav>
                         <details id="show-phone">
@@ -145,9 +145,11 @@
             </div>
         </section>
 
-        <section class="services services-center" id="nav-services">
+        <section class="services" id="nav-services">
             <div class="wrapper">
-                <h2 class="title-blue text-center">Services</h2>
+                <h2 class="services-title title-blue text-center">
+                    <span>Services</span>
+                </h2>
                 <div class="services-lot-img">
                     <div class="services-lot-img-title">
                         <h3>Local moving</h3>
@@ -280,12 +282,16 @@
             <div class="get-free-quote-yellow-line"></div>
         </div>
 
-        <section class="few-of-us-in-numbers">
-            <div class="wrapper position-relative">
+        <section
+            class="few-of-us-in-numbers position-relative"
+            id="nav-promotionf"
+        >
+            <div class="few-of-us-in-numbers-yellow-line"></div>
+            <div class="wrapper">
                 <h3 class="title-blue text-center">
                     Few of us in numbers
                 </h3>
-                <div class="few-of-us-in-numbers-yellow-line"></div>
+
                 <div class="few-of-us-in-numbers-grid">
                     <div class="wrapper">
                         <img
@@ -492,7 +498,7 @@
         <div class="wrapper">
             <div class="our-company-yellow-line"></div>
         </div>
-        <section class="our-company">
+        <section class="our-company" id="nav-about-us">
             <div class="wrapper">
                 <h2 class="title-white">Our company</h2>
                 <div class="our-company-inside">
@@ -551,7 +557,7 @@
             <div class="our-company-yellow-line"></div>
         </div>
 
-        <section class="questions">
+        <section class="questions" id="nav-faqs">
             <div class="wrapper">
                 <h2 class="title-blue">Frequently Asked Questions</h2>
 
@@ -696,7 +702,7 @@
             </div>
         </section>
 
-        <section class="slider-reviews">
+        <section class="slider-reviews" id="nav-reviews">
             <div class="wrapper">
                 <h2 class="title-blue text-center">
                     The most important indicator of the level of the company -
@@ -712,12 +718,16 @@
                                         src="img/mySlides-inside-img-brian-cobb.png"
                                         alt=""
                                     />
-                                    <div>
-                                        <img
-                                            src="img/mySlides-inside-img-icon.png"
-                                            alt=""
-                                        />
-                                        <h3 class="slider-title">Brian Cobb</h3>
+                                    <div class="slider-right-text">
+                                        <span>
+                                            <img
+                                                src="img/mySlides-inside-img-icon.png"
+                                                alt=""
+                                            />
+                                            <h3 class="slider-title">
+                                                Brian Cobb
+                                            </h3>
+                                        </span>
                                         <p class="slider-text">
                                             Lorem, ipsum dolor sit amet
                                             consectetur adipisicing elit.
@@ -734,12 +744,16 @@
                                         src="img/mySlides-inside-img-vincent-morgan.png"
                                         alt=""
                                     />
-                                    <div>
-                                        <img
-                                            src="img/mySlides-inside-img-icon.png"
-                                            alt=""
-                                        />
-                                        <h3 class="slider-title">Brian Cobb</h3>
+                                    <div class="slider-right-text">
+                                        <span>
+                                            <img
+                                                src="img/mySlides-inside-img-icon.png"
+                                                alt=""
+                                            />
+                                            <h3 class="slider-title">
+                                                Brian Cobb
+                                            </h3>
+                                        </span>
                                         <p class="slider-text">
                                             Lorem, ipsum dolor sit amet
                                             consectetur adipisicing elit.
@@ -759,12 +773,16 @@
                                         src="img/mySlides-inside-img-daniel-houston.png"
                                         alt=""
                                     />
-                                    <div>
-                                        <img
-                                            src="img/mySlides-inside-img-icon.png"
-                                            alt=""
-                                        />
-                                        <h3 class="slider-title">Brian Cobb</h3>
+                                    <div class="slider-right-text">
+                                        <span>
+                                            <img
+                                                src="img/mySlides-inside-img-icon.png"
+                                                alt=""
+                                            />
+                                            <h3 class="slider-title">
+                                                Brian Cobb
+                                            </h3>
+                                        </span>
                                         <p class="slider-text">
                                             Lorem ipsum dolor sit amet
                                             consectetur adipisicing elit. Porro
@@ -780,17 +798,98 @@
                                 <div class="mySlides-inside-block">
                                     <img
                                         class="mySlides-inside-photo"
-                                        src="img/mySlides-inside-img-brian-cobb.png"
+                                        src="img/services-img-close-box.png"
                                         alt=""
                                     />
-                                    <div>
-                                        <img
-                                            src="img/mySlides-inside-img-icon.png"
-                                            alt=""
-                                        />
-                                        <h3 class="slider-title">
-                                            Lorem, ipsum.
-                                        </h3>
+                                    <div class="slider-right-text">
+                                        <span>
+                                            <img
+                                                src="img/mySlides-inside-img-icon.png"
+                                                alt=""
+                                            />
+                                            <h3 class="slider-title">
+                                                adipisicing elit
+                                            </h3>
+                                        </span>
+                                        <p class="slider-text">
+                                            Lorem ipsum dolor sit amet
+                                            consectetur adipisicing elit. Sit,
+                                            saepe eaque deleniti odio ut culpa
+                                            possimus doloremque sed soluta
+                                            laborum. Neque necessitatibus velit
+                                            minima earum placeat magnam,
+                                            reprehenderit illum in?
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="mySlides-inside-block">
+                                    <img
+                                        class="mySlides-inside-photo"
+                                        src="img/services-img-open-box.png"
+                                        alt=""
+                                    />
+                                    <div class="slider-right-text">
+                                        <span>
+                                            <img
+                                                src="img/mySlides-inside-img-icon.png"
+                                                alt=""
+                                            />
+                                            <h3 class="slider-title">
+                                                Lorem dolor.
+                                            </h3>
+                                        </span>
+                                        <p class="slider-text">
+                                            Lorem ipsum dolor sit amet
+                                            consectetur adipisicing elit. Neque,
+                                            voluptates.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="mySlides-inside-block">
+                                    <img
+                                        class="mySlides-inside-photo"
+                                        src="img/services-img-stairs-sofa.png"
+                                        alt=""
+                                    />
+                                    <div class="slider-right-text">
+                                        <span>
+                                            <img
+                                                src="img/mySlides-inside-img-icon.png"
+                                                alt=""
+                                            />
+                                            <h3 class="slider-title">
+                                                Lorem, ipsum.
+                                            </h3>
+                                        </span>
+                                        <p class="slider-text">
+                                            Lorem ipsum dolor sit amet
+                                            consectetur adipisicing elit.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mySlides">
+                            <div class="mySlides-inside">
+                                <div class="mySlides-inside-block">
+                                    <img
+                                        class="mySlides-inside-photo"
+                                        src="img/services-img-truck.png"
+                                        alt=""
+                                    />
+                                    <div class="slider-right-text">
+                                        <span>
+                                            <img
+                                                src="img/mySlides-inside-img-icon.png"
+                                                alt=""
+                                            />
+                                            <h3 class="slider-title">
+                                                optio sapiente
+                                            </h3>
+                                        </span>
                                         <p class="slider-text">
                                             Lorem ipsum dolor sit amet.
                                         </p>
@@ -800,23 +899,25 @@
                                 <div class="mySlides-inside-block">
                                     <img
                                         class="mySlides-inside-photo"
-                                        src="img/mySlides-inside-img-vincent-morgan.png"
+                                        src="img/services-img-man-and-girl.png"
                                         alt=""
                                     />
-                                    <div>
-                                        <img
-                                            src="img/mySlides-inside-img-icon.png"
-                                            alt=""
-                                        />
-                                        <h3 class="slider-title">Lorem.</h3>
+                                    <div class="slider-right-text">
+                                        <span>
+                                            <img
+                                                src="img/mySlides-inside-img-icon.png"
+                                                alt=""
+                                            />
+                                            <h3 class="slider-title">
+                                                rerum nemo
+                                            </h3>
+                                        </span>
                                         <p class="slider-text">
                                             Lorem ipsum dolor sit amet
-                                            consectetur adipisicing elit. A
-                                            minus odit molestias dolor nulla,
-                                            modi atque accusantium hic sint aut
-                                            quaerat, ullam, quis laboriosam
-                                            expedita praesentium omnis ipsum at
-                                            incidunt!
+                                            consectetur adipisicing elit. Enim
+                                            facere quisquam odio dolore. Itaque,
+                                            a quam laudantium impedit ducimus
+                                            veniam.
                                         </p>
                                     </div>
                                 </div>
@@ -827,92 +928,31 @@
                                         src="img/mySlides-inside-img-daniel-houston.png"
                                         alt=""
                                     />
-                                    <div>
-                                        <img
-                                            src="img/mySlides-inside-img-icon.png"
-                                            alt=""
-                                        />
-                                        <h3 class="slider-title">sit amet</h3>
+                                    <div class="slider-right-text">
+                                        <span>
+                                            <img
+                                                src="img/services-img-unloading.png"
+                                                alt=""
+                                            />
+                                            <h3 class="slider-title">
+                                                officia dolores
+                                            </h3>
+                                        </span>
                                         <p class="slider-text">
                                             Lorem ipsum dolor sit amet
-                                            consectetur adipisicing elit. Quae,
-                                            necessitatibus?
+                                            consectetur adipisicing elit. Unde
+                                            natus adipisci corrupti autem ad! Ex
+                                            ullam recusandae hic dicta quibusdam
+                                            esse distinctio vero dolorum, a
+                                            commodi, ratione, expedita et porro
+                                            nisi laborum ipsa sapiente! Nulla
+                                            nisi ex unde molestiae expedita?
                                         </p>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="mySlides">
-                            <div class="mySlides-inside">
-                                <div class="mySlides-inside-block">
-                                    <img
-                                        class="mySlides-inside-photo"
-                                        src="img/mySlides-inside-img-brian-cobb.png"
-                                        alt=""
-                                    />
-                                    <div>
-                                        <img
-                                            src="img/mySlides-inside-img-icon.png"
-                                            alt=""
-                                        />
-                                        <h3 class="slider-title">Brian Cobb</h3>
-                                        <p class="slider-text">
-                                            Lorem, ipsum dolor sit amet
-                                            consectetur adipisicing elit.
-                                            Deserunt obcaecati nam temporibus
-                                            saepe rerum nemo omnis ea sunt quod.
-                                            Dolorem.
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <div class="mySlides-inside-block">
-                                    <img
-                                        class="mySlides-inside-photo"
-                                        src="img/mySlides-inside-img-vincent-morgan.png"
-                                        alt=""
-                                    />
-                                    <div>
-                                        <img
-                                            src="img/mySlides-inside-img-icon.png"
-                                            alt=""
-                                        />
-                                        <h3 class="slider-title">Brian Cobb</h3>
-                                        <p class="slider-text">
-                                            Lorem, ipsum dolor sit amet
-                                            consectetur adipisicing elit.
-                                            Maiores neque, cupiditate alias
-                                            autem ut natus mollitia odio,
-                                            officiis, optio sapiente eaque
-                                            architecto magni nobis modi nam
-                                            excepturi officia dolores
-                                            laboriosam!
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <div class="mySlides-inside-block">
-                                    <img
-                                        class="mySlides-inside-photo"
-                                        src="img/mySlides-inside-img-daniel-houston.png"
-                                        alt=""
-                                    />
-                                    <div>
-                                        <img
-                                            src="img/mySlides-inside-img-icon.png"
-                                            alt=""
-                                        />
-                                        <h3 class="slider-title">Brian Cobb</h3>
-                                        <p class="slider-text">
-                                            Lorem ipsum dolor sit amet
-                                            consectetur adipisicing elit. Porro
-                                            placeat reiciendis vitae.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                         <a class="prev" onclick="plusSlides(-1)">❮</a>
                         <a class="next" onclick="plusSlides(1)">❯</a>
                     </div>
@@ -924,8 +964,35 @@
                     </div>
                 </div>
             </div>
-            <img src="img/slider-reviews.png" alt="" />
+            <img
+                class="slider-reviews-background"
+                src="img/slider-reviews-background.png"
+                alt=""
+            />
         </section>
+        <section class="map">
+            <a href="https://goo.gl/maps/ifXGzdBkjpkqbuhP9">
+                <img src="img/map.png" alt=""
+            /></a>
+        </section>
+        <footer>
+            <div class="wrapper">
+                <h4>
+                    <a class="this-website" href="#njlocal-moving">
+                        © NJ Local moving 2016</a
+                    >
+                </h4>
+                <img src="img/footer-img-icon.png" alt="" />
+                <a href="https://en.wikipedia.org/wiki/Angie%27s_List">
+                    <img src="img/footer-img-text.png" alt=""
+                /></a>
+                <p>
+                    <a class="link-webcase" href="https://webcase.com.ua/"
+                        >Designed by WebCase</a
+                    >
+                </p>
+            </div>
+        </footer>
         <script src="js/slider.js"></script>
     </body>
 </html>

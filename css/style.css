@@ -316,16 +316,23 @@ body .feedback {
 body .services {
   padding-top: 110px;
   padding-bottom: 107px; }
-  body .services h2 {
-    margin-bottom: 85px;
+  body .services .services-title {
+    /* margin-bottom: 85px;
+            position: relative;
+            top: 0%;
+            left: 18%; */
     position: relative;
-    top: 0%;
-    left: 18%; }
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+    body .services .services-title span {
+      text-align: center; }
   body .services .services-lot-img {
     position: relative;
     display: flex;
     border: 1px solid #ff7101;
-    padding: 105px 37.5px 85px; }
+    padding: 105px 37.5px 85px;
+    width: 100%; }
     body .services .services-lot-img .services-lot-img-title {
       display: flex;
       position: absolute;
@@ -443,16 +450,17 @@ body .get-free-quote {
 body .few-of-us-in-numbers {
   padding-top: 110px;
   padding-bottom: 180px; }
+  body .few-of-us-in-numbers .few-of-us-in-numbers-yellow-line {
+    z-index: -6;
+    position: absolute;
+    top: 360px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 1px;
+    width: 100%;
+    background-color: #ff7101; }
   body .few-of-us-in-numbers .wrapper h3 {
     margin-bottom: 90px; }
-  body .few-of-us-in-numbers .wrapper .few-of-us-in-numbers-yellow-line {
-    z-index: -6;
-    position: relative;
-    top: 120px;
-    left: -400px;
-    height: 1px;
-    width: 2000px;
-    background-color: #ff7101; }
   body .few-of-us-in-numbers .wrapper .few-of-us-in-numbers-grid {
     display: grid;
     justify-content: center;
@@ -663,9 +671,11 @@ body .questions {
       position: relative;
       top: 6px;
       content: url(../img/questions-img-details-open.png);
-      margin-right: 35px; }
+      margin-right: 35px;
+      cursor: pointer; }
     body .questions details[open] summary:before {
-      content: url(../img/questions-img-details-close.png); }
+      content: url(../img/questions-img-details-close.png);
+      cursor: pointer; }
     body .questions details .questions-text-title {
       font-family: "Montserrat";
       font-weight: 500;
@@ -756,7 +766,8 @@ body .ask-question {
         text-transform: uppercase;
         background: transparent;
         background-color: white;
-        color: #1c3051; }
+        color: #1c3051;
+        cursor: pointer; }
         @media (max-width: 767px) {
           body .ask-question .ask-question-two-column form input:last-child {
             font-size: calc( 10px + 6.8 * ((100vw - 320px) / 1920)); } }
@@ -778,95 +789,143 @@ body .ask-question {
         width: 700px; }
 
 body .slider-reviews {
+  position: relative;
   padding-top: 90px;
-  padding-bottom: 500px; }
-  body .slider-reviews .slider * {
-    box-sizing: border-box; }
-  body .slider-reviews .slider body {
-    font-family: Verdana, sans-serif;
-    margin: 0; }
-  body .slider-reviews .slider .slideshow-container {
-    position: relative; }
-    body .slider-reviews .slider .slideshow-container .mySlides {
-      display: none;
-      padding: 80px;
-      text-align: center; }
-      body .slider-reviews .slider .slideshow-container .mySlides .mySlides-inside {
-        display: flex;
-        justify-content: space-between; }
-        body .slider-reviews .slider .slideshow-container .mySlides .mySlides-inside .mySlides-inside-block {
-          width: 370px;
-          display: flex; }
-          body .slider-reviews .slider .slideshow-container .mySlides .mySlides-inside .mySlides-inside-block .mySlides-inside-photo {
-            margin-left: 15px;
-            margin-right: 15px;
-            height: 105px;
-            width: 105px; }
-          body .slider-reviews .slider .slideshow-container .mySlides .mySlides-inside .mySlides-inside-block div {
-            top: 10px;
-            position: relative; }
-            body .slider-reviews .slider .slideshow-container .mySlides .mySlides-inside .mySlides-inside-block div img,
-            body .slider-reviews .slider .slideshow-container .mySlides .mySlides-inside .mySlides-inside-block div .slider-title {
-              display: inline-block;
-              position: flex; }
-            body .slider-reviews .slider .slideshow-container .mySlides .mySlides-inside .mySlides-inside-block div .slider-title {
-              bottom: 10px;
-              font-family: "Montserrat";
-              text-transform: uppercase;
-              color: #ff7101; }
-              @media (max-width: 767px) {
-                body .slider-reviews .slider .slideshow-container .mySlides .mySlides-inside .mySlides-inside-block div .slider-title {
-                  font-size: calc( 10.78px + 6.8 * ((100vw - 320px) / 1920)); } }
-              @media (min-width: 767px) {
-                body .slider-reviews .slider .slideshow-container .mySlides .mySlides-inside .mySlides-inside-block div .slider-title {
-                  font-size: calc( 10.78px + 4 * (100vw / 1920)); } }
-            body .slider-reviews .slider .slideshow-container .mySlides .mySlides-inside .mySlides-inside-block div .slider-text {
-              margin-top: 10px;
-              font-weight: bold;
-              text-align: left;
-              line-height: 27.71px;
-              color: #1c3051; }
-              @media (max-width: 767px) {
-                body .slider-reviews .slider .slideshow-container .mySlides .mySlides-inside .mySlides-inside-block div .slider-text {
-                  font-size: calc( 8.93px + 6.8 * ((100vw - 320px) / 1920)); } }
-              @media (min-width: 767px) {
-                body .slider-reviews .slider .slideshow-container .mySlides .mySlides-inside .mySlides-inside-block div .slider-text {
-                  font-size: calc( 8.93px + 4 * (100vw / 1920)); } }
-  body .slider-reviews .slider .prev,
-  body .slider-reviews .slider .next {
-    cursor: pointer;
+  padding-bottom: 550px; }
+  body .slider-reviews .slider {
+    z-index: 100; }
+    body .slider-reviews .slider * {
+      box-sizing: border-box; }
+    body .slider-reviews .slider body {
+      font-family: Verdana, sans-serif;
+      margin: 0; }
+    body .slider-reviews .slider .slideshow-container {
+      position: relative; }
+      body .slider-reviews .slider .slideshow-container .mySlides {
+        display: none;
+        padding: 80px;
+        text-align: center; }
+        body .slider-reviews .slider .slideshow-container .mySlides .mySlides-inside {
+          display: flex;
+          justify-content: space-between; }
+          body .slider-reviews .slider .slideshow-container .mySlides .mySlides-inside .mySlides-inside-block {
+            width: 370px;
+            display: flex; }
+            body .slider-reviews .slider .slideshow-container .mySlides .mySlides-inside .mySlides-inside-block .mySlides-inside-photo {
+              margin-left: 15px;
+              margin-right: 15px;
+              height: 105px;
+              width: 105px; }
+            body .slider-reviews .slider .slideshow-container .mySlides .mySlides-inside .mySlides-inside-block .slider-right-text {
+              top: 10px;
+              position: relative; }
+              body .slider-reviews .slider .slideshow-container .mySlides .mySlides-inside .mySlides-inside-block .slider-right-text span {
+                display: flex;
+                align-items: center; }
+                body .slider-reviews .slider .slideshow-container .mySlides .mySlides-inside .mySlides-inside-block .slider-right-text span img {
+                  margin-right: 10px;
+                  height: 31px;
+                  width: 31px; }
+                body .slider-reviews .slider .slideshow-container .mySlides .mySlides-inside .mySlides-inside-block .slider-right-text span .slider-title {
+                  font-family: "Montserrat";
+                  text-transform: uppercase;
+                  color: #ff7101; }
+                  @media (max-width: 767px) {
+                    body .slider-reviews .slider .slideshow-container .mySlides .mySlides-inside .mySlides-inside-block .slider-right-text span .slider-title {
+                      font-size: calc( 10.78px + 6.8 * ((100vw - 320px) / 1920)); } }
+                  @media (min-width: 767px) {
+                    body .slider-reviews .slider .slideshow-container .mySlides .mySlides-inside .mySlides-inside-block .slider-right-text span .slider-title {
+                      font-size: calc( 10.78px + 4 * (100vw / 1920)); } }
+              body .slider-reviews .slider .slideshow-container .mySlides .mySlides-inside .mySlides-inside-block .slider-right-text .slider-text {
+                display: block;
+                margin-top: 10px;
+                font-weight: bold;
+                text-align: left;
+                line-height: 27.71px;
+                color: #1c3051; }
+                @media (max-width: 767px) {
+                  body .slider-reviews .slider .slideshow-container .mySlides .mySlides-inside .mySlides-inside-block .slider-right-text .slider-text {
+                    font-size: calc( 8.93px + 6.8 * ((100vw - 320px) / 1920)); } }
+                @media (min-width: 767px) {
+                  body .slider-reviews .slider .slideshow-container .mySlides .mySlides-inside .mySlides-inside-block .slider-right-text .slider-text {
+                    font-size: calc( 8.93px + 4 * (100vw / 1920)); } }
+    body .slider-reviews .slider .prev,
+    body .slider-reviews .slider .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      margin-top: -30px;
+      padding: 16px;
+      color: #1c3051;
+      font-weight: bold;
+      font-size: 20px;
+      border-radius: 0 3px 3px 0;
+      user-select: none; }
+    body .slider-reviews .slider .next {
+      position: absolute;
+      right: 0;
+      border-radius: 3px 0 0 3px; }
+    body .slider-reviews .slider .prev:hover,
+    body .slider-reviews .slider .next:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+      color: white; }
+    body .slider-reviews .slider .dot-container {
+      text-align: center;
+      padding: 20px; }
+    body .slider-reviews .slider .dot {
+      cursor: pointer;
+      height: 10px;
+      width: 10px;
+      margin: 0 15px;
+      background-color: #ff7101;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.6s ease; }
+    body .slider-reviews .slider .active,
+    body .slider-reviews .slider .dot:hover {
+      background-color: #1c3051; }
+  body .slider-reviews .slider-reviews-background {
     position: absolute;
-    top: 50%;
-    width: auto;
-    margin-top: -30px;
-    padding: 16px;
-    color: #1c3051;
-    font-weight: bold;
-    font-size: 20px;
-    border-radius: 0 3px 3px 0;
-    user-select: none; }
-  body .slider-reviews .slider .next {
-    position: absolute;
-    right: 0;
-    border-radius: 3px 0 0 3px; }
-  body .slider-reviews .slider .prev:hover,
-  body .slider-reviews .slider .next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-    color: white; }
-  body .slider-reviews .slider .dot-container {
-    text-align: center;
-    padding: 20px; }
-  body .slider-reviews .slider .dot {
-    cursor: pointer;
-    height: 10px;
-    width: 10px;
-    margin: 0 15px;
-    background-color: #ff7101;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease; }
-  body .slider-reviews .slider .active,
-  body .slider-reviews .slider .dot:hover {
-    background-color: #1c3051; }
-  body .slider-reviews .slider q {
-    font-style: italic; }
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    bottom: 300px;
+    z-index: -1; }
+
+body .map img {
+  height: 100%;
+  width: 100%; }
+
+body footer {
+  padding-top: 50px;
+  padding-bottom: 45px;
+  background-color: #1c3051; }
+  body footer div {
+    display: flex;
+    align-items: center; }
+    body footer div .this-website {
+      font-family: "Proxima Nova Bl";
+      font-weight: 900;
+      font-style: normal;
+      color: white; }
+      @media (max-width: 767px) {
+        body footer div .this-website {
+          font-size: calc( 14.38px + 10.2 * ((100vw - 320px) / 1920)); } }
+      @media (min-width: 767px) {
+        body footer div .this-website {
+          font-size: calc( 14.38px + 6 * (100vw / 1920)); } }
+    body footer div img:nth-of-type(1) {
+      margin-left: 60px;
+      margin-right: 20px; }
+    body footer div .link-webcase {
+      margin-left: 575px;
+      font-family: "Proxima Nova Rg";
+      font-weight: bold;
+      color: white; }
+      @media (max-width: 767px) {
+        body footer div .link-webcase {
+          font-size: calc( 10px + 6.8 * ((100vw - 320px) / 1920)); } }
+      @media (min-width: 767px) {
+        body footer div .link-webcase {
+          font-size: calc( 10px + 4 * (100vw / 1920)); } }
